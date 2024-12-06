@@ -1,0 +1,136 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  border: 2px solid white;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+.product-card {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.product-card button {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card button:hover {
+  background-color: #444;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Notificación de añadido al carrito */
+.notification {
+  position: fixed;
+  top: 10px; /* Espacio desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  background-color: #28a745; /* Verde */
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 1000; /* Asegurarse de que la notificación esté por encima de otros elementos */
+  opacity: 1;
+  transition: opacity 0.5s ease-out; /* Transición suave para desaparecer */
+}
+
+/* Cart view */
+.cart-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item td {
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}

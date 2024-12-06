@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2024 Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="navigateTo('store')">Tienda</a></li>
+        <li><a href="#" onclick="navigateTo('about')">Sobre Nosotros</a></li>
+        <li><a href="#" onclick="navigateTo('datatable')">DataTable</a></li>
+        <li><a href="#" onclick="navigateTo('cart')">Carrito de Compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Vista de la Tienda -->
+    <section id="store" class="view">
+      <h1>Productos en Tienda</h1>
+      <div class="producto">
+        <img class="producto__imagen" src="xbox.png" alt="Xbox Series">
+        <p class="producto__nombre">Xbox Series</p>
+        <p class="producto__precio">$11.299</p>
+        <button class="producto__boton" data-product="0">Añadir al Carrito</button>
+      </div>
+      <div class="producto">
+        <img class="producto__imagen" src="razer.png" alt="Razer">
+        <p class="producto__nombre">Razer</p>
+        <p class="producto__precio">$9.500</p>
+        <button class="producto__boton" data-product="1">Añadir al Carrito</button>
+      </div>
+      <div class="producto">
+        <img class="producto__imagen" src="nintendo.png" alt="Nintendo Switch">
+        <p class="producto__nombre">Nintendo Switch</p>
+        <p class="producto__precio">$6.999</p>
+        <button class="producto__boton" data-product="2">Añadir al Carrito</button>
+      </div>
+    </section>
+
+    <!-- Vista Carrito de Compras -->
+    <section id="cart" class="view">
+      <h1>Carrito de Compras</h1>
+      <ul id="cart-items"></ul>
+      <button id="clear-cart">Limpiar Carrito</button>
+      <p>Total: $<span id="cart-total">0</span></p>
+    </section>
+
+    <!-- Vista DataTable -->
+    <section id="datatable" class="view">
+      <h1>Vista DataTable</h1>
+      <table id="product-table" class="display">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nintendo Switch</td>
+            <td>$6.999</td>
+            <td><img src="nintendoswitch.png" alt="Nintendo Switch" width="50"></td>
+          </tr>
+          <tr>
+            <td>Razer</td>
+            <td>$9.499</td>
+            <td><img src="razer.png" alt="Razer" width="50"></td>
+          </tr>
+          <tr>
+            <td>Xbox Series X</td>
+            <td>$11.299</td>
+            <td><img src="xbox.png" alt="Xbox Series X" width="50"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+  <footer>
+    <p>&copy; 2024 Games</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+</body>
+</html>
